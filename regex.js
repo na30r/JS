@@ -4,6 +4,8 @@ const dataArray = [
     "123",
     "HELLO",
     "test@example.com",
+    "test@gmail.com",
+    "test@yahoo.com",
     "https://www.example.com",
     "abc123",
     "01-01-2022",
@@ -27,11 +29,13 @@ const dataArray = [
     "abab",
     "aab",
     "aaab",
-    "b"
+    "b",
+    "asd",
+    "afd"
 ];
 
 // Regular expressions
-const regex0 = /123/;
+const regex0 = /.*/;
 
 var current = regex0;
 

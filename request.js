@@ -5,7 +5,7 @@ export async function getUsers() {
         req.open("GET", url)
         req.send();
         req.onload = () => {
-            resolve(req.responseText) // readyState will be 4
+            resolve(req.responseText)
         };
         req.onerror = (e) => {
             reject(e)
@@ -14,9 +14,3 @@ export async function getUsers() {
     )
     return prom
 }
-
-
-// getUsers("")
-//     .then(a => (JSON.parse(a)))
-//     .then(a => a.map(b => b.name))
-//     .then(a => console.log(a))

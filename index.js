@@ -2,13 +2,13 @@ import { getUsers } from "./request.js";
 import { User } from "./user.js";
 
 var users = [];
-var tableHeaders = [
+var tableHeaders = [  //which columns should be displayed 
     { name: "id", visible: true },
     { name: "name", visible: true },
     { name: "email", visible: true },
     { name: "phone", visible: true },
     { name: "website", visible: true },
-    { name: "username", visible: true },
+    { name: "username", visible: false },
     { name: "address", visible: true },
 ]
 
@@ -40,7 +40,7 @@ function tableInit() {
 
 
 function getTableData() {
-    getUsers("")
+    getUsers()
         .then(a => (JSON.parse(a)))
         .then(a => a.map(b => new User(b)))
         .then(a => { a.forEach(b => addRow(b)); return a })
